@@ -1,7 +1,8 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
-import { Rocket, Sparkles, Zap, ArrowRight } from 'lucide-react';
+import { Rocket, Zap, ArrowRight } from 'lucide-react';
+import MagneticButton from './MagneticButton';
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
       {/* Spline 3D Cover */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/zhZFnwyOYLgqlLWk/scene.splinecode"
+          scene="https://prod.spline.design/xVcGsBa0crFDHR-t/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
@@ -27,35 +28,34 @@ export default function Hero() {
           className="text-center"
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur">
-            <Sparkles className="h-4 w-4 text-violet-300" />
-            <span className="text-sm text-violet-100">Interactive, minimalist, modern • Smooth + sticky scrolling</span>
+            <span className="text-sm text-violet-100">Industrial • Robotics • Interactive • Dark</span>
           </div>
 
           <h1 className="mx-auto max-w-4xl bg-gradient-to-br from-white via-violet-200 to-fuchsia-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-5xl md:text-6xl">
-            A seamless grid of motion and micro‑interactions
+            Interactive 3D hero with magnetic controls
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-white/80 md:text-xl">
-            Explore a modern, technology‑forward canvas with smooth scrolling, sticky storytelling, and delightful
-            micro‑interactions throughout.
+            A cursor‑aware, tactile interface with smooth scrolling, sticky storytelling, and parallax depth.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
+            <MagneticButton
               href="#features"
-              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow-lg shadow-fuchsia-500/25 hover:brightness-110"
             >
               <Rocket className="h-5 w-5" />
-              Dive in
+              <span>Dive in</span>
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
+            </MagneticButton>
+
+            <MagneticButton
               href="#story"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-base font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
+              className="border border-white/15 bg-white/5 text-white/90 backdrop-blur hover:bg-white/10"
             >
               <Zap className="h-5 w-5 text-amber-300" />
-              See the scroll magic
-            </a>
+              <span>See the scroll magic</span>
+            </MagneticButton>
           </div>
         </motion.div>
 
